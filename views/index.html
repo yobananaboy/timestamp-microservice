@@ -1,0 +1,58 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matt's timestamp microservice!</title>
+    <meta name="description" content="A timestamp made by Matt">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Matt's timestamp microservice
+      </h1>
+    </header>
+
+    <main>
+      <h4>
+        How to use 
+      </h4>
+      <p>Pass a string as a paramater to <em>https://matts-unix-timestamp.glitch.me/</em> to request time in unix or natural language.</p>
+      <p>The time you pass can be unix <strong>or</strong> natural language and you will be returned both unix and nautral language.</p>
+      <h5>
+        Example usage
+      </h5>
+      <code>https://matts-unix-timestamp.glitch.me/December%2015,%202015</code>
+      <code>https://matts-unix-timestamp.glitch.me/1450137600</code>
+      <h5>
+        Example output
+      </h5>
+      <code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+    </main>
+
+    <footer>
+      <p>
+        Made by <a href="https://glitch.com">Matt Keegan</a>
+      </p>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
