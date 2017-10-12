@@ -20,6 +20,10 @@ h1 {
   color: #f8bbd0;
 }
 
+div {
+  overflow-wrap: break-word;
+}
+
 .info {
   background: white;
 }
