@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
     return next();
   }
 
-  res.send(err.message || 'Error');
+  res.send(err.message || 'The date you entered must not have been unix or natural language. Please try again!');
 });
 
 app.use((err, req, res, next) => {
@@ -70,19 +70,6 @@ app.use((err, req, res, next) => {
 function getMonthFromString(mon){
    return new Date(Date.parse(mon + ' 1, 2017')).getMonth();
 }
-
-/*
-app.get("/dreams", function (request, response) {
-  response.send(dreams);
-});
-
-// could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/dreams", function (request, response) {
-  dreams.push(request.query.dream);
-  response.sendStatus(200);
-});
-*/
-
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
